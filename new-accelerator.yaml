@@ -1,6 +1,6 @@
 accelerator:
   displayName: rest
-  description: ""
+  description: "rest api exmaple"
   iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-tanzu-light.png
   tags:
   - java
