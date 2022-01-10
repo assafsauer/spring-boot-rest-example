@@ -6,16 +6,27 @@ accelerator:
   - java
   - spring
 
+
   options:
-  - name: deploymentType
-    inputType: select
-    choices:
-    - value: none
-      text: Skip Kubernetes deployment
-    - value: k8s-simple
-      text: Kubernetes deployment and service
-    - value: knative
-      text: Knative service
-    defaultValue: knative
-    required: true
+  - name: includeKubernetes
+    label: Kubernetes deployment
+    display: true
+    description: Toggle "On" to include skaffold and Kubernetes deployment configurations.
+    inputType: checkbox
+    dataType: boolean
+    defaultValue: false
+
+  - name: enableAppLiveView
+    label: App Live View
+    dependsOn:
+      name: includeKubernetes
+    description: Toggle "On" to enable Application Live View integration.
+    inputType: checkbox
+    dataType: boolean
+    defaultValue: false
+
+engine:
+  merge:
+  - include: [ "**/*" ]
+    exclude: [ "readme.md", "deploying.md", "kubernetes/*.yaml", "skaffold.yaml" ]
 
