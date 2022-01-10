@@ -13,7 +13,7 @@ accelerator:
       text: Kubernetes deployment and service
     - value: knative
       text: Knative service
-    defaultValue: k8s-simple
+    defaultValue: knative
     required: true
     
 engine:
