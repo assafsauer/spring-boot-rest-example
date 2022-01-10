@@ -3,18 +3,24 @@ accelerator:
   description: ""
   iconUrl: https://raw.githubusercontent.com/simple-starters/icons/master/icon-tanzu-light.png
   tags: []
+  tags:
+- java
+- spring
+- tanzu
+  
   options:
   - name: deploymentType
     inputType: select
     choices:
-    - value: none
-      text: Skip Kubernetes deployment
+    - value: workload
+      text: TAP workload
     - value: k8s-simple
       text: Kubernetes deployment and service
-    - value: knative
-      text: Knative service
-    defaultValue: knative
+    - value: none
+      text: Skip Kubernetes deployment
+    defaultValue: workload
     required: true
+
     
 engine:
   include:
