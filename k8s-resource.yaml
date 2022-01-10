@@ -1,0 +1,9 @@
+apiVersion: accelerator.apps.tanzu.vmware.com/v1alpha1
+kind: Accelerator
+metadata:
+  name: rest
+spec:
+  git:
+    url: https://github.com/assafsauer/spring-boot-rest-example
+    ref:
+      branch: master
